@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+	--color-ink: #100d12;
+	--color-panel: #1a1520;
+	--color-brand: #ff2d3a;
+	--color-cream: #f6f1e7;
+	--font-display: "Arial Black", "Arial", sans-serif;
+}
+
+body {
+	background:
+		radial-gradient(1200px 500px at 50% -10%, rgba(255, 45, 58, 0.18), transparent 55%),
+		var(--color-ink);
+	color: var(--color-cream);
+	font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.clock {
+	font-family: Consolas, "Courier New", monospace;
+	font-variant-numeric: tabular-nums;
+}
+
+.wheel {
+	scrollbar-width: none;
+	mask-image: linear-gradient(transparent, black 35%, black 65%, transparent);
+}
+
+.wheel::-webkit-scrollbar {
+	display: none;
+}
+
+@keyframes alarm-flash {
+	0%,
+	100% { opacity: 0.08; }
+	50% { opacity: 0.55; }
+}
+
+.alarm-flash {
+	animation: alarm-flash 0.55s linear infinite;
+}
