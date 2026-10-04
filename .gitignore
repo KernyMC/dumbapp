@@ -5,3 +5,6 @@ node_modules
 tsconfig.tsbuildinfo
 .vercel
 __pycache__
+
+.vercel
+.env*
